@@ -1,11 +1,11 @@
 # Small-Business-Simulator---Sridhar-Rangan-and-Behailu-Tekletsadik
 Team Salt and Pepper
 
-Project Name: Small Business Simulation
-
-# Project Title: title here (10 words maximum)
+# Project Title: Small Business Simulator with Financial Analysis.
 
 ### Statement
+This project is designed to be an helper program to any small business.  It will assist in a variety of small business needs such as revenue, cost, materials and other crucial business aspects of a small business.  In addition, we hope to develop a financial modeling simulator to develop investment options and such.  This project is interesting as it serves to teach us elements from business embedded with computer science.  We hope to learn the key aspects of growing a business and also financial modeling.
+
 Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn? 
 
 ### Analysis
