@@ -49,9 +49,8 @@ If you include some kind of _quantitative analysis,_ that would be good.
 Sridhar: We will know if we are sucessful if the values of the information are the same of the ones in the database.  One of the most crucial things for this program to be sucessful is for the information received from the database to be accurately stored in the program.  After assuring this part was sucessful, we will also know if we are sucessful if the window pops up presenting the results in a neat and clean fashion.
 
 ## Architecture Diagram
-Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
+![architecture diagram](https://cloud.githubusercontent.com/assets/17771791/14316640/305f9c00-fbd2-11e5-9e45-617590b53613.jpg)
 
-Create several paragraphs of narrative to explain the pieces and how they interoperate.
 
 ## Schedule
 Explain how you will go from proposal to finished product. 
