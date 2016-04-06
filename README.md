@@ -1,5 +1,4 @@
 # Small-Business-Simulator---Sridhar-Rangan-and-Behailu-Tekletsadik
-Team Salt and Pepper
 
 # Project Title: Small Business Simulator with Financial Analysis.
 
@@ -25,12 +24,6 @@ Behailu: We will be generating all our own data as it is a simulation. The SQL d
 Sridhar: At some point, we may decide on using some external images to make the window with results more professional.
 
 ### Deliverable and Demonstration
-Explain exactly what you'll have at the end. What will it be able to do at the live demo?
-What exactly will you produce at the end of the project? A piece of software, yes, but what will it do? Here are some questions to think about (and answer depending on your application).
-
-Will it run on some data, like batch mode? Will you present some analytical results of the processing? How can it be re-run on different source data?
-
-Will it be interactive? Can you show it working? This project involves a live demo, so interactivity is good.
 
 In the end, we will have a program that can accurately analyze specific business information in the database.  The program will have an output window with all the analysis completed.
 
