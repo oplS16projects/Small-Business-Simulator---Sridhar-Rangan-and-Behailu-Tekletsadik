@@ -40,13 +40,15 @@ Will it be interactive? Can you show it working? This project involves a live de
 
 In the end, we will have a program that can accurately analyze specific business information in the database.  The program will have an output window with all the analysis completed.
 
-The simulation will be able to be run in a stepwise fashion
+The simulation will be able to be run in a stepwise fashion so one can see how predictive models work and how the simulation runs based on health of stock and normal volatility.
 
 ### Evaluation of Results
 How will you know if you are successful? 
 If you include some kind of _quantitative analysis,_ that would be good.
 
-Sridhar: We will know if we are sucessful if the values of the information are the same of the ones in the database.  One of the most crucial things for this program to be sucessful is for the information received from the database to be accurately stored in the program.  After assuring this part was sucessful, we will also know if we are sucessful if the window pops up presenting the results in a neat and clean fashion.
+ We will know if we are sucessful if the values of the information are the same of the ones in the database.  One of the most crucial things for this program to be sucessful is for the information received from the database to be accurately stored in the program.  After assuring this part was sucessful, we will also know if we are sucessful if the window pops up presenting the results in a neat and clean fashion.
+ The stock modeler will show a proper looking variability with the small business predictive modelling at least being right some of the time.
+
 
 ## Architecture Diagram
 ![architecture diagram](https://cloud.githubusercontent.com/assets/17771791/14316640/305f9c00-fbd2-11e5-9e45-617590b53613.jpg)
@@ -66,34 +68,23 @@ Write concrete steps for your schedule to move from concept to working system.
 ### First Milestone (Fri Apr 15)
 What exactly will be turned in on this day? 
 
-Sridhar: By the first milestone, we should have the connection between our simulation database and racket.  From there we should be able to read specific categories of the information in the database.
+By the first milestone, we should have the connection between our simulation database and racket.  From there we should be able to read specific categories of the information in the database.
+Should have implemented mersenne twister and box-muller transform.
 
 ### Second Milestone (Fri Apr 22)
 What exactly will be turned in on this day? 
 
-Sridhar: By the second milestone, we plan on a majority of the analysis done for multiple categories.  By this time also, we should clean up any bugs that may arise.
+By the second milestone, we plan on a majority of the analysis done for multiple categories. The Black-Sholes pricing model should be implemented by this point. By this time also, we should clean up any bugs that may arise.
 
 ### Final Presentation (last week of semester)
 What additionally will be done in the last chunk of time?
 
-Sridhar: In the end, we should have a program that can perform a variety of analysis on different aspects of business information.  In addition will clean any errors and bugs that will arise throughout the course of the project.
+In the end, we should have a program that can perform a variety of analysis on different aspects of business information. The GUI will display all the relevant stock pricing data in a potentially stepwise fashion. In addition will clean any errors and bugs that will arise throughout the course of the project.
 
-## Group Responsibilities
-Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
 
-**Additional instructions for teams of three:** 
-* Remember that you must have prior written permission to work in groups of three (specifically, an approved `FP3` team declaration submission).
-* The team must nominate a lead. This person is primarily responsible for code integration. This work may be shared, but the team lead has default responsibility.
-* The team lead has full partner implementation responsibilities also.
-* Identify who is team lead.
-
-In the headings below, replace the silly names and GitHub handles with your actual ones.
 
 ### Sridhar Rangan @SridharRangan
-will write the....
+will write the database interaction and analysis.
 
-### Leonard Lambda @lennylambda
-will work on...
-
-### Frank Functions @frankiefunk 
-Frank is team lead. Additionally, Frank will work on...
+### Behailu Tekletsadik @OhBehive
+Stock options pricing and GUI.
