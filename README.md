@@ -43,10 +43,10 @@ The simulation will be able to be run in a stepwise fashion so one can see how p
  
 
 ### First Milestone (Fri Apr 15)
-What exactly will be turned in on this day? 
+What was turned in?
 
-By the first milestone, we should have the connection between our simulation database and racket.  From there we should be able to read specific categories of the information in the database.
-Should have implemented mersenne twister and box-muller transform.
+A simple implementation and definition of the black-scholes equation. Applying changes to statistical modeling of system and mersenne twister is broken for some reason, so the methodology is here.
+The database has been implemented and generic methods have been added.
 
 ### Second Milestone (Fri Apr 22)
 What exactly will be turned in on this day? 
