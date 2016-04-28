@@ -1,14 +1,12 @@
-# FP7-webpage Title of Project
-This is a template for using your repo's README.md as your project web page. 
-I recommend you copy and paste into your README file. Delete this line and the one above it, customize everything else. Make it look good!
+# Small Business Simulator
 
 ##Authors
-Person One
+Sridhar Rangan
 
-Person Two
+Behailu Tekletsadik
 
 ##Overview
-A brief description of the project is given here.  The description is 1 to 3 sentences long.  Be concise and clear.
+The general purpose of our project was to create a helper program for a small business looking to broaden their financial options.  The project was divided into two parts, with the first part being a HTML webpage which prompts the user for inputs for the Black-Scholes model.  The second part was stock modeling using a Monte Carlo method along with other simulations.  The end product of the project was a small simulator to help a small business grow through the use of different financial models and simulations.
 
 ##Screenshot
 (insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
@@ -26,13 +24,13 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
 
 ##Favorite Scheme Expressions
-####Mark (a team member)
+####MSridhar
 Each team member should identify a favorite expression or procedure, written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:
 ```scheme
 (map (lambda (x) (foldr compose functions)) data)
 ```
-####Lillian (another team member)
+####Behailu
 This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
 ```scheme
 (let* ((expr (convert-to-regexp (read-line my-in-port)))
