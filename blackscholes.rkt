@@ -1,5 +1,4 @@
 #lang racket
-#lang racket
 (require plot)
 (require math)
 ;constants
@@ -56,14 +55,14 @@
         (begin
           (set! x (flatten x))
           (set! y (flatten y))
-          (plot (points (map vector x y) #:color 'red)))
+          (plot (lines (map vector x (map (lambda (x) (randr x)) y)) #:color 'red)))
         (begin
-          (set! y (cons y (black-scholes 'p 100 70 timestep .1 1)))
+          (set! y (cons y (black-scholes 'p 200 220 timestep .05 .1)))
           (set! x (cons x timestep))
           (helper (+ timestep .01) end))))
   (helper 0.01 time))
 
 
 
-(define (randr x p)
-  (+ x (* (random (- p) p) x))) 
+(define (randr x)
+  (+ x (* (random) x .05) (- (* (random) x .05))))
