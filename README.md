@@ -15,6 +15,7 @@ Here's a demonstration of how to display an image that's uploaded to this repo:
 ![screenshot showing env diagram](withdraw.png)
 
 ##Concepts Demonstrated
+
 Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
 * **Data abstraction** is used to provide access to the elements of the RSS feed.
 * The objects in the OpenGL world are represented with **recursive data structures.**
@@ -24,7 +25,7 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 Briefly describe the existing technology you utilized, and how you used it. Provide a link to that technology(ies).
 
 ##Favorite Scheme Expressions
-####MSridhar
+####Sridhar
 Each team member should identify a favorite expression or procedure, written by them, and explain what it does. Why is it your favorite? What OPL philosophy does it embody?
 Remember code looks something like this:
 ```scheme
