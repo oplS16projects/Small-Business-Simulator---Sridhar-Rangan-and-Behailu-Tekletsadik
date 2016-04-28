@@ -25,6 +25,8 @@ Identify the OPL concepts demonstrated in your project. Be brief. A simple list 
 
 [web-server/insta](https://docs.racket-lang.org/continue/)
 
+[plot](https://docs.racket-lang.org/plot/)
+
 ##Favorite Scheme Expressions
 ####Sridhar
 One of my favorite snippets of code from this project would be the code to set variables in racket.  The reasoning for being my favorite is that this part took the most time to understand.  The code below modifies an individual global variable by extracting the binding from the user input in the HTML.  This code is so powerful as it allows in just one line the transition between HTML and the Black-Scholes model.
