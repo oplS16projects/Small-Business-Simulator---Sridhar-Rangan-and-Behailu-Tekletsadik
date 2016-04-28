@@ -1,7 +1,7 @@
 #lang web-server/insta
- 
+ (require plot)
 (struct post (title body third fourth fifth))
- 
+
 (define BLOG
   (list (post " " " " " " " " " ")))
  
@@ -53,7 +53,9 @@
   (response/xexpr
    `(html (head (title "BusinessAssistant"))
           (body (h1 "Business Assistant with Financial Modeling")
-                (h2 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "BusinessAssistant"))
+                
+                (h2 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "BusinessAssistant")
+                (img ([src "a.png"])))
           
 (p "Welcome to BusinessAssistant2016 created by Sridhar Rangan and Behailu Tekletsakik. This program will assist your company in stock options to help your company grow.
 This program uses the Black-Scholes Model. We hope this program will be instrumental in growing your company!")
@@ -84,7 +86,7 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
 (define (render-posts a-blog)
   `(div ((class "posts"))
         ,@(map render-post a-blog)))
-        
+;constants
 (define a1 0.31938153)
 (define a2 -0.356563782)
 (define a3 1.781477937)
@@ -94,6 +96,7 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
 
 
 ;simple black scholes model using cumulative normal distribution.
+;will tie in to monte carlo simulations and the generators.
 
 (define (square x) (* x x))
 
@@ -131,7 +134,7 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
 (define x '())
 (define y '())
 
-(define (bsloop stock strike time interest volatility)
+(define (bsloop time)
   (define (helper timestep end)
     (if (> timestep end)
         (begin
@@ -139,7 +142,7 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
           (set! y (flatten y))
           (plot-file (lines (map vector x (map (lambda (x) (randr x)) y)) #:color 'red) "bs.png"))
         (begin
-          (set! y (cons y (black-scholes 'p stock strike time interest volatility))
+          (set! y (cons y (black-scholes 'p 200 220 timestep .05 .1)))
           (set! x (cons x timestep))
           (helper (+ timestep .01) end))))
   (helper 0.01 time))
