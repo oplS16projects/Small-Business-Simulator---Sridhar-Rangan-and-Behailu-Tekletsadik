@@ -53,13 +53,14 @@
   (response/xexpr
    `(html (head (title "BusinessAssistant"))
           (body (h1 "Business Assistant with Financial Modeling")
-                (h1 "Welcome")
-(p "Welcome to BusinessAssistant2016 created by Sridhar Rangan and Behailu Tekletsakik. This program will assist your company in multiple stock options to help your company grow.
-This program uses modeling such as the monte carlo method and black-scholes model. We hope this program will be instrumental in growing your company!")
+                (h2 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "BusinessAssistant"))
+          
+(p "Welcome to BusinessAssistant2016 created by Sridhar Rangan and Behailu Tekletsakik. This program will assist your company in stock options to help your company grow.
+This program uses the Black-Scholes Model. We hope this program will be instrumental in growing your company!")
 
-(h1 "Instructions")
+(h2 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "Instructions")
 (p "Below you will need to input different values for our different models. Please input them as requested below.")
-(h1 "Values For Black-Scholes")
+(h1 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "Values for Black-Scholes Model")
                ,(render-posts a-blog)
                (form
                 "Input Strike Price: "
@@ -72,7 +73,7 @@ This program uses modeling such as the monte carlo method and black-scholes mode
                 (input ((name "fourth"))
                 "\nInput volatility: "
                 (input ((name "fifth"))
-                (input ((type "submit")))))))))))
+                (input ((type "submit"))))))))))
 
 
 (define (render-post a-post)
