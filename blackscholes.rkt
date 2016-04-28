@@ -1,20 +1,28 @@
 #lang racket
+#lang racket
+(require plot)
+(require math)
 ;constants
 (define a1 0.31938153)
 (define a2 -0.356563782)
 (define a3 1.781477937)
-(define a4 1.821255978)
+(define a4 -1.821255978)
 (define a5 1.330274429)
-(define cnd-c '(a1 a2 a3 a4 a5))
+(define cnd-c (list 0 a1 a2 a3 a4 a5))
+
+
 ;simple black scholes model using cumulative normal distribution.
 ;will tie in to monte carlo simulations and the generators.
 
 (define (square x) (* x x))
+
+
 (define (horner strike coefficients)
   (if (null? coefficients)
       0
       (+ (car coefficients)
-         (* strike (cdr coefficients)))))
+
+         (* strike (horner strike (cdr coefficients))))))
 
 (define (CND strike)
 
@@ -38,5 +46,24 @@
         ((eq? type 'p)
          (- (* strike (exp (- (* interest time))) (CND (- f2)))
             (* stock (CND (- f1))))))))
-  
-      
+
+(define x '())
+(define y '())
+
+(define (bsloop time)
+  (define (helper timestep end)
+    (if (> timestep end)
+        (begin
+          (set! x (flatten x))
+          (set! y (flatten y))
+          (plot (points (map vector x y) #:color 'red)))
+        (begin
+          (set! y (cons y (black-scholes 'p 100 70 timestep .1 1)))
+          (set! x (cons x timestep))
+          (helper (+ timestep .01) end))))
+  (helper 0.01 time))
+
+
+
+(define (randr x p)
+  (+ x (* (random (- p) p) x))) 
