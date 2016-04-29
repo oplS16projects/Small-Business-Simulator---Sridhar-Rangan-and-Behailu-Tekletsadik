@@ -9,10 +9,8 @@ Behailu Tekletsadik
 The general purpose of our project was to create a helper program for a small business looking to broaden their financial options.  The project was divided into two parts, with the first part being a HTML webpage which prompts the user for inputs for the Black-Scholes model.  The second part of the project was the creation of the Black-Scholes model and adding variability to the simulation.  The end product of the project was a program that could provide an estimation for stocks for our small business in question.
 
 ##Screenshot
-(insert a screenshot here. You may opt to get rid of the title for it. You need at least one screenshot. Make it actually appear here, don't just add a link.)
 
-Here's a demonstration of how to display an image that's uploaded to this repo:
-![screenshot showing env diagram](withdraw.png)
+![screenshothtml](https://cloud.githubusercontent.com/assets/17771791/14917264/2e0aea50-0dec-11e6-942f-43fa20142f4c.jpg)
 
 ##Concepts Demonstrated
 
