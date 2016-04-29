@@ -7,6 +7,9 @@ Behailu Tekletsadik
 
 ##Overview
 The general purpose of our project was to create a helper program for a small business looking to broaden their financial options.  The project was divided into two parts, with the first part being a HTML webpage which prompts the user for inputs for the Black-Scholes model.  The second part of the project was the creation of the Black-Scholes model and adding variability to the simulation.  The end product of the project was a program that could provide an estimation for stocks for our small business in question.
+The Black-Scholes model is an ideal based simulation of the minimum market price of a stock based on a call/put perspective. It takes into account the stock price, the strike price, the interest, the time duration and the volatility of the stock itself.
+In reality, the nature of stock trading cannot be predicted and this is a very lightweight model. Most stock predictive models and future analysis simulations take into account terabytes of data. This is obviously not feasible with our resources.
+
 
 ##Screenshot
 
@@ -14,10 +17,11 @@ The general purpose of our project was to create a helper program for a small bu
 
 ##Concepts Demonstrated
 
-Identify the OPL concepts demonstrated in your project. Be brief. A simple list and example is sufficient. 
-* **Data abstraction** is used to provide access to the elements of the RSS feed.
-* The objects in the OpenGL world are represented with **recursive data structures.**
-* **Symbolic language processing techniques** are used in the parser.
+Writing a webpage, addressing of a network page.
+
+Mathematical models of financial data.
+
+Random number generation and its practicality. If I were to use OpenCL, the Mersenne twister would've been ideal. That doesn't work in this case so I used a much simpler but less accurate formula for generating trending stock variability.
 
 ##External Technology and Libraries
 
@@ -36,14 +40,20 @@ One of my favorite snippets of code from this project would be the code to set v
   (set! volatility (string->number (extract-binding/single 'fifth bindings)))
 ```
 ####Behailu
-This expression reads in a regular expression and elegantly matches it against a pre-existing hashmap....
+Since I just did a mathematical model, I have to say that the blac-scholes model is my favorite part. I think accounting for the put/call of stock options trading definitely helped me in learning a bit more about stock trading because the results actually make sense. It's cool to see what financial modelers use to make ludacrious amounts of money.
 ```scheme
-(let* ((expr (convert-to-regexp (read-line my-in-port)))
-             (matches (flatten
-                       (hash-map *words*
-                                 (lambda (key value)
-                                   (if (regexp-match expr key) key '()))))))
-  matches)
+define (bsloop time)
+  (define (helper timestep end)
+    (if (> timestep end)
+        (begin
+          (set! x (flatten x))
+          (set! y (flatten y))
+          (plot (lines (map vector x (map (lambda (x) (randr x)) y)) #:color 'red) "bs.png"))
+        (begin
+          (set! y (cons y (black-scholes 'p 200 220 timestep .05 .1)))
+          (set! x (cons x timestep))
+          (helper (+ timestep .01) end))))
+  (helper 0.01 time))
 ```
 
 
