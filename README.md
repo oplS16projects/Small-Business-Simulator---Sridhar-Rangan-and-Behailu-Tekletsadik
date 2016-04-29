@@ -46,8 +46,6 @@ This expression reads in a regular expression and elegantly matches it against a
   matches)
 ```
 
-##Additional Remarks
-Anything else you want to say in your report. Can rename or remove this section.
 
 #How to Download and Run
 You may want to link to your latest release for easy downloading by people (such as Mark).
