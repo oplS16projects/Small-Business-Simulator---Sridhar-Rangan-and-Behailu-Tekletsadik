@@ -1,17 +1,23 @@
+
 #lang web-server/insta
  (require plot)
+(require racket/gui/base)
 (struct post (title body third fourth fifth))
 
 (define BLOG
   (list (post " " " " " " " " " ")))
  
 (define (start request)
+  (define frame (new frame% [label "Example"]))
+  (send frame show #t)
+  
   (local [(define a-blog
             (cond [(can-parse-post? (request-bindings request))
                    (cons (parse-post (request-bindings request))
                          BLOG)]
                   [else
                    BLOG]))]
+    
          (render-blog-page a-blog request)))
 
 (define (can-parse-post? bindings)
@@ -33,6 +39,7 @@
   (set! time (string->number (extract-binding/single 'third bindings)))
   (set! interest (string->number (extract-binding/single 'fourth bindings)))
   (set! volatility (string->number (extract-binding/single 'fifth bindings)))
+  (bsloop 1)
   (display "Strike: ")
   (display strike)
   (display "\nStock: ")
@@ -43,6 +50,7 @@
   (display interest)
   (display "\nVolatility: ")
   (display volatility)
+  (bsloop 1)
   (post (extract-binding/single 'title bindings)
         (extract-binding/single 'body bindings)
         (extract-binding/single 'third bindings)
@@ -55,7 +63,7 @@
           (body (h1 "Business Assistant with Financial Modeling")
                 
                 (h2 ([style "color: #fff; background-color: #53606D; text-align:center;"]) "BusinessAssistant")
-                (img ([src "a.png"])))
+                (h3 (img ([ src "bs.png"]))))
           
 (p "Welcome to BusinessAssistant2016 created by Sridhar Rangan and Behailu Tekletsakik. This program will assist your company in stock options to help your company grow.
 This program uses the Black-Scholes Model. We hope this program will be instrumental in growing your company!")
@@ -75,7 +83,9 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
                 (input ((name "fourth"))
                 "\nInput volatility: "
                 (input ((name "fifth"))
-                (input ((type "submit"))))))))))
+                (input ((type "submit")))
+                ))))))
+  )
 
 
 (define (render-post a-post)
@@ -133,10 +143,12 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
 
 ;;;Added this code in but the Black-Scholes doesn't return anything. Also set global variables to 1 since with 0
 ;;; it broke the program. Not sure about the graph loop though.
-(black-scholes .31 stock strike time interest volatility)
+
 ;;
 (define x '())
 (define y '())
+(define (randr x)
+  (+ x (* (random) x .05) (- (* (random) x .05))))
 
 (define (bsloop time)
   (define (helper timestep end)
@@ -151,7 +163,3 @@ This program uses the Black-Scholes Model. We hope this program will be instrume
           (helper (+ timestep .01) end))))
   (helper 0.01 time))
 
-
-
-(define (randr x)
-  (+ x (* (random) x .05) (- (* (random) x .05))))
