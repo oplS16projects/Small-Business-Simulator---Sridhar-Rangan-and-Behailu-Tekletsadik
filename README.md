@@ -57,7 +57,4 @@ define (bsloop time)
 ```
 
 
-#How to Download and Run
-You may want to link to your latest release for easy downloading by people (such as Mark).
 
-Include what file to run, what to do with that file, how to interact with the app when its running, etc. 
